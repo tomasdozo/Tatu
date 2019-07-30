@@ -17,7 +17,8 @@ public class Tablero {
 	private int paradas;
 
 	private Tablero() {
-
+		this.ancho = 10;
+		this.alto = 10;
 	}
 
 	public static Tablero getInstance() {
@@ -26,11 +27,9 @@ public class Tablero {
 
 	public void inicializar() {
 		paradas=0;
-		this.ancho = 5;
-		this.alto = 5;
-		mapa = new Casillero[5][5];
-		for (int x = 0; x < 5; x++) {
-			for (int y = 0; y < 5; y++) {
+		mapa = new Casillero[ancho][alto];
+		for (int x = 0; x < ancho; x++) {
+			for (int y = 0; y < alto; y++) {
 				mapa[x][y] = new Casillero(Elementos.Nada,x,y);
 			}
 		}

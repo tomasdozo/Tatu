@@ -58,11 +58,13 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
 
         instrucciones= new LinkedList<>();
         msg=Mensajes.NEUTRO;
-        //Generacion Tablero Grafico
-        interfazTablero();
 
         //Inicializar Tablero Codigo
         inicializarTablero();
+
+        //Generacion Tablero Grafico
+        interfazTablero();
+
 
         //Graficar Elementos
         graficar();
@@ -91,10 +93,10 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
         ImageView cell;
         TableLayout.LayoutParams sRows= new TableLayout.LayoutParams();
         sRows.weight=1;
-        for (int i = 0; i< 5; i++) {
+        for (int i = 0; i< juego.getAlto(); i++) {
             TableRow row = new TableRow(this);
             row.setLayoutParams(sRows);
-            for (int j = 0; j < 5; j++) {
+            for (int j = 0; j < juego.getAncho(); j++) {
                 cell=new ImageView(this);
                 cell.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT));
                 cell.setBackground(getResources().getDrawable(R.drawable.casilla));
@@ -113,9 +115,9 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
     private void  graficar(){
         TableRow row;
         ImageView cell;
-        for(int i=0; i<5; i++){
+        for(int i=0; i<juego.getAlto(); i++){
             row= (TableRow) table.getChildAt(i);
-            for (int j=0; j<5; j++){
+            for (int j=0; j<juego.getAncho(); j++){
                 cell= (ImageView) row.getChildAt(j);
                 switch (juego.getTipoCasilla(j,i)){
                     case Meta:
@@ -269,7 +271,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
         ImageButton aux=new ImageButton(this);
 
-        aux.setLayoutParams(new LinearLayout.LayoutParams(130,130));
+        aux.setLayoutParams(new LinearLayout.LayoutParams(104,104));
         aux.setScaleType(ImageView.ScaleType.FIT_CENTER);
         aux.setBackgroundResource(R.drawable.casilla);
         aux.setOnClickListener(new View.OnClickListener() {
