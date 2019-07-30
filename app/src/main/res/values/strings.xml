@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Tatu</string>
+    <string name="jugar">Jugar</string>
+    <string name="imagen">Imagen</string>
+
+    <string name="title_activity_juego">Juego</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="volver">Volver</string>
+    <string name="empezar">Empezar</string>
+    <string name="cartel_meta">LLEGASTE A LA META!!!</string>
+    <string name="cartel_parada">Llegaste a una parada</string>
+    <string name="cartel_parada_visitada">Ya habias visitado esta parada</string>
+    <string name="cartel_paradas_faltantes">Te falta pasar por algunas paradas</string>
+    <string name="cartel_error">ERROR: Intestaste acceder a una casilla bloqueada o fuera del limite del mapa</string>
+    <string name="cartel_no_llego">No llegaste a la meta</string>
+    <string name="intro_stem">Educación STEM\nen escuela primaria</string>
+    <string name="comandos">Comandos</string>
+    <string name="ins_izquierda">Gira sobre el lugar hacia la izquierda.</string>
+    <string name="ins_adelante">Avanza una casilla hacia donde esta mirando.</string>
+    <string name="ins_derecha">Gira sobre el lugar hacia la derecha.</string>
+    <string name="ins_interactuar">Interactua con la casilla en la que esta parado.</string>
+    <string name="casillas_interactuables">Casillas Interactuables</string>
+    <string name="parada">Parada</string>
+    <string name="meta">Meta</string>
+    <string name="instrucciones">Instrucciones</string>
+    <string name="nivel">Nivel</string>
+</resources>
