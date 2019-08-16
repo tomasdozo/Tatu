@@ -30,8 +30,11 @@ public class MainActivity extends AppCompatActivity {
                         intent.putExtra("nivel", nivel);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(MainActivity.this, "El nivel debe ser entre 1 y 4", Toast.LENGTH_SHORT);
+                        Toast.makeText(MainActivity.this, "Nivel Inexistente", Toast.LENGTH_SHORT).show();
                     }
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "Ingrese un nivel entre 1 y 4", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -134,14 +134,18 @@
         android:id="@+id/etNivel"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryLight"
         android:ems="10"
         android:hint="@string/nivel"
+        android:importantForAutofill="no"
         android:inputType="number"
         android:textAlignment="center"
         android:textColor="@color/black"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/btnJugar"
         app:layout_constraintEnd_toEndOf="@+id/btnJugar"
         app:layout_constraintStart_toStartOf="@+id/btnJugar"
-        android:importantForAutofill="no" tools:targetApi="o"/>
+        tools:targetApi="o" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

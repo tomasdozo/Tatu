@@ -17,8 +17,8 @@ public class Tablero {
 	private int paradas;
 
 	private Tablero() {
-		this.ancho = 10;
-		this.alto = 10;
+		this.ancho = 7;
+		this.alto = 7;
 	}
 
 	public static Tablero getInstance() {
