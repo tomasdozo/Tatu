@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/casilla"
+        android:gravity="center" />
+    <item
+        android:bottom="40dp"
+        android:drawable="@drawable/circulo"
+        android:left="2dp"
+        android:right="40dp"
+        android:top="2dp" />
+    <item
+        android:bottom="40dp"
+        android:drawable="@drawable/blocked"
+        android:left="2dp"
+        android:right="40dp"
+        android:top="2dp" />
+</layer-list>
