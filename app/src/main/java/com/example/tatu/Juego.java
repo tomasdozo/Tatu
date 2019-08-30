@@ -273,7 +273,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
 
         aux.setLayoutParams(new LinearLayout.LayoutParams(104,104));
         aux.setScaleType(ImageView.ScaleType.FIT_CENTER);
-        aux.setBackgroundResource(R.drawable.delete);
+        aux.setBackgroundResource(R.mipmap.delete9);
         aux.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -4,15 +4,16 @@
         android:drawable="@drawable/casilla"
         android:gravity="center" />
     <item
-        android:bottom="40dp"
         android:drawable="@drawable/circulo"
-        android:left="2dp"
-        android:right="40dp"
-        android:top="2dp" />
+        android:gravity="top|left"
+        android:top="5sp"
+        android:left="5sp"
+
+        />
     <item
-        android:bottom="40dp"
         android:drawable="@drawable/blocked"
-        android:left="2dp"
-        android:right="40dp"
-        android:top="2dp" />
+        android:gravity="top|left"
+
+
+        />
 </layer-list>
