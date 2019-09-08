@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Instrucciones"></activity>
+        <activity android:name=".Niveles"></activity>
+        <activity android:name=".Instrucciones" />
         <activity android:name=".Juego" />
         <activity android:name=".MainActivity">
             <intent-filter>
