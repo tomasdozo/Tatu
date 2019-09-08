@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Niveles"
+        android:text="@string/nivel"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="80sp"
         android:textStyle="bold|italic"
@@ -22,6 +22,7 @@
         app:layout_constraintVertical_bias="0.1" />
 
     <TableLayout
+        android:id="@+id/tabla"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
@@ -43,28 +44,30 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/lv1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:background="@drawable/level"
+                android:clickable="true"
                 android:gravity="center"
-                android:text="1"
+                android:text="@string/_1"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="100sp" />
+                android:textSize="100sp"
+                android:focusable="true" />
 
             <TextView
-                android:id="@+id/lv2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:background="@drawable/level"
+                android:clickable="true"
                 android:gravity="center"
-                android:text="2"
+                android:text="@string/_2"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="100sp" />
+                android:textSize="100sp"
+                android:focusable="true" />
 
         </TableRow>
 
@@ -74,35 +77,30 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/lv3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:background="@drawable/level"
+                android:clickable="true"
                 android:gravity="center"
-                android:text="3"
+                android:text="@string/_3"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="100sp" />
+                android:textSize="100sp"
+                android:focusable="true" />
 
             <TextView
-                android:id="@+id/lv4"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:background="@drawable/level"
+                android:clickable="true"
                 android:gravity="center"
-                android:text="4"
+                android:text="@string/_4"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="100sp" />
+                android:textSize="100sp"
+                android:focusable="true" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

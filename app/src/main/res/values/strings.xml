@@ -25,5 +25,9 @@
     <string name="parada">Parada</string>
     <string name="meta">Meta</string>
     <string name="instrucciones">Instrucciones</string>
-    <string name="nivel">Nivel</string>
+    <string name="nivel">Niveles</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
 </resources>
