@@ -3,6 +3,7 @@ package com.example.tatu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -22,6 +23,15 @@ public class Niveles extends AppCompatActivity implements View.OnClickListener {
                 fila.getChildAt(j).setOnClickListener(this);
             }
         }
+
+        Button btnVolver=findViewById(R.id.btnSalir);
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Niveles.this.finish();
+            }
+        });
+
     }
 
     @Override
