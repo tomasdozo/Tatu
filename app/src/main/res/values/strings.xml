@@ -9,13 +9,13 @@
 
     <string name="volver">Volver</string>
     <string name="empezar">Empezar</string>
-    <string name="cartel_meta">LLEGASTE A LA META!!!</string>
+    <string name="cartel_meta">(~˘▾˘)~ ¡GANASTE! ~(˘▾˘~)</string>
     <string name="cartel_parada">Llegaste a una parada</string>
     <string name="cartel_parada_visitada">Ya habias visitado esta parada</string>
     <string name="cartel_paradas_faltantes">Te falta pasar por algunas paradas</string>
-    <string name="cartel_error">ERROR: Intestaste acceder a una casilla bloqueada o fuera del limite del mapa</string>
+    <string name="cartel_error">ERROR: Intentaste acceder a una casilla bloqueada o fuera del límite del mapa</string>
     <string name="cartel_no_llego">No llegaste a la meta</string>
-    <string name="intro_stem">Educación STEM\nen escuela primaria</string>
+    <string name="intro_stem">Educación STEM\nen escuelas primarias</string>
     <string name="comandos">Comandos</string>
     <string name="ins_izquierda">Gira sobre el lugar hacia la izquierda.</string>
     <string name="ins_adelante">Avanza una casilla hacia donde esta mirando.</string>
@@ -30,4 +30,5 @@
     <string name="_2">2</string>
     <string name="_3">3</string>
     <string name="_4">4</string>
+    <string name="limpiar">limpiar</string>
 </resources>

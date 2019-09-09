@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         btnJugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                        Intent intent = new Intent(MainActivity.this, com.example.tatu.Niveles.class);
-                        startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, com.example.tatu.Niveles.class);
+                startActivity(intent);
 
             }
         });
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnInstrucciones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(MainActivity.this,com.example.tatu.Instrucciones.class);
+                Intent intent = new Intent(MainActivity.this, com.example.tatu.Instrucciones.class);
                 startActivity(intent);
 
             }

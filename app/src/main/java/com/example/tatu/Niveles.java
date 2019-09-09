@@ -16,15 +16,15 @@ public class Niveles extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_niveles);
-        TableLayout tabla= findViewById(R.id.tabla);
-        for(int i=0; i<tabla.getChildCount();i++){
-            TableRow fila=(TableRow) tabla.getChildAt(i);
-            for (int j=0; j<fila.getChildCount();j++){
+        TableLayout tabla = findViewById(R.id.tabla);
+        for (int i = 0; i < tabla.getChildCount(); i++) {
+            TableRow fila = (TableRow) tabla.getChildAt(i);
+            for (int j = 0; j < fila.getChildCount(); j++) {
                 fila.getChildAt(j).setOnClickListener(this);
             }
         }
 
-        Button btnVolver=findViewById(R.id.btnSalir);
+        Button btnVolver = findViewById(R.id.btnSalir);
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
