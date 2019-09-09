@@ -26,7 +26,8 @@ public class Niveles extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        String nroNivel=((TextView) view).getText().toString();
+        String aux = ((TextView) view).getText().toString();
+        int nroNivel = Integer.parseInt(aux);
         Intent intent = new Intent(Niveles.this, com.example.tatu.Juego.class);
         intent.putExtra("nivel", nroNivel);
         startActivity(intent);
