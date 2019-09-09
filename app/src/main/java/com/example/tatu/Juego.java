@@ -1,7 +1,5 @@
 package com.example.tatu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +12,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.tatu.enumerativos.Instrucciones;
 import com.example.tatu.enumerativos.Mensajes;
 import com.example.tatu.juego.Tablero;
@@ -22,8 +22,10 @@ import com.example.tatu.juego.Tatu;
 import java.util.LinkedList;
 import java.util.List;
 
-import static com.example.tatu.enumerativos.Elementos.*;
-import static com.example.tatu.enumerativos.Instrucciones.*;
+import static com.example.tatu.enumerativos.Instrucciones.Avanzar;
+import static com.example.tatu.enumerativos.Instrucciones.Derecha;
+import static com.example.tatu.enumerativos.Instrucciones.Izquierda;
+import static com.example.tatu.enumerativos.Instrucciones.Seleccionar;
 
 public class Juego extends AppCompatActivity implements View.OnClickListener {
 
@@ -273,7 +275,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
 
         aux.setLayoutParams(new LinearLayout.LayoutParams(104,104));
         aux.setScaleType(ImageView.ScaleType.FIT_CENTER);
-        aux.setBackgroundResource(R.mipmap.delete9);
+        aux.setBackgroundResource(R.drawable.casilla);
         aux.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
