@@ -10,13 +10,11 @@ import static com.example.tatu.enumerativos.Elementos.Parada;
 public class Tablero {
     private static final Tablero tablero = new Tablero();
     private Casillero[][] mapa;
-    private int ancho;
-    private int alto;
+    public static final int ancho = 7;
+    public static final int alto = 7;
     private int paradas;
 
     private Tablero() {
-        this.ancho = 7;
-        this.alto = 7;
     }
 
     public static Tablero getInstance() {
@@ -79,6 +77,48 @@ public class Tablero {
                 setTipoCasilla(Bloqueado, 4, 1);
                 Tatu.getInstance().inicializar(2, 2, 0);
                 break;
+            case 5:
+                setTipoCasilla(Meta, 0, 2);
+                setTipoCasilla(Parada, 1, 4);
+                setTipoCasilla(Parada, 3, 4);
+                setTipoCasilla(Bloqueado, 0, 3);
+                setTipoCasilla(Bloqueado, 0, 4);
+                setTipoCasilla(Bloqueado, 0, 5);
+                setTipoCasilla(Bloqueado, 0, 6);
+                setTipoCasilla(Bloqueado, 1, 1);
+                setTipoCasilla(Bloqueado, 1, 2);
+                setTipoCasilla(Bloqueado, 1, 3);
+                setTipoCasilla(Bloqueado, 1, 6);
+                setTipoCasilla(Bloqueado, 2, 3);
+                setTipoCasilla(Bloqueado, 2, 4);
+                setTipoCasilla(Bloqueado, 2, 6);
+                setTipoCasilla(Bloqueado, 3, 6);
+                setTipoCasilla(Bloqueado, 4, 1);
+                setTipoCasilla(Bloqueado, 4, 2);
+                setTipoCasilla(Bloqueado, 4, 3);
+                setTipoCasilla(Bloqueado, 4, 4);
+                setTipoCasilla(Bloqueado, 4, 6);
+                setTipoCasilla(Bloqueado, 5, 6);
+                setTipoCasilla(Bloqueado, 6, 6);
+                Tatu.getInstance().inicializar(5, 1, 180);
+                break;
+            case 6:
+                setTipoCasilla(Meta, 6, 0);
+                setTipoCasilla(Parada, 0, 3);
+                setTipoCasilla(Parada, 3, 5);
+                setTipoCasilla(Bloqueado, 1, 1);
+                setTipoCasilla(Bloqueado, 1, 5);
+                setTipoCasilla(Bloqueado, 2, 2);
+                setTipoCasilla(Bloqueado, 2, 4);
+                setTipoCasilla(Bloqueado, 3, 3);
+                setTipoCasilla(Bloqueado, 4, 2);
+                setTipoCasilla(Bloqueado, 4, 4);
+                setTipoCasilla(Bloqueado, 5, 1);
+                setTipoCasilla(Bloqueado, 5, 5);
+                setTipoCasilla(Bloqueado, 6, 6);
+                Tatu.getInstance().inicializar(0, 5, 90);
+                break;
+
 
         }
 

@@ -103,10 +103,10 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
         ImageView cell;
         TableLayout.LayoutParams sRows = new TableLayout.LayoutParams();
         sRows.weight = 1;
-        for (int i = 0; i < juego.getAlto(); i++) {
+        for (int i = 0; i < Tablero.alto; i++) {
             TableRow row = new TableRow(this);
             row.setLayoutParams(sRows);
-            for (int j = 0; j < juego.getAncho(); j++) {
+            for (int j = 0; j < Tablero.ancho; j++) {
                 cell = new ImageView(this);
                 cell.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT));
                 cell.setBackground(getResources().getDrawable(R.drawable.casilla));
@@ -123,11 +123,13 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void graficar() {
+
+        //Mostrar Tablero
         TableRow row;
         ImageView cell;
-        for (int i = 0; i < juego.getAlto(); i++) {
+        for (int i = 0; i < Tablero.alto; i++) {
             row = (TableRow) table.getChildAt(i);
-            for (int j = 0; j < juego.getAncho(); j++) {
+            for (int j = 0; j < Tablero.ancho; j++) {
                 cell = (ImageView) row.getChildAt(j);
                 switch (juego.getTipoCasilla(j, i)) {
                     case Meta:
@@ -141,6 +143,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
                         break;
                     case Nada:
                         cell.setImageResource(R.drawable.nada);
+                        //cell.setImageResource(R.drawable.casilla);
                         break;
                     case ParadaVisitada:
                         cell.setImageResource(R.drawable.parada_visitada);
@@ -197,10 +200,12 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
     private void recorrer() {
         gBotones.setVisibility(View.GONE);
         btnEmpezar.setVisibility(View.INVISIBLE);
+        btnLimpiar.setVisibility(View.INVISIBLE);
 
         //Deshabilitar clic en la lista
         enableDisableView(gInstrucciones, false);
         enableDisableView(btnEmpezar, false);
+        enableDisableView(btnLimpiar, false);
 
         horizontalScroll.postDelayed(new Runnable() {
             public void run() {
@@ -266,6 +271,8 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
                         instrucciones.clear();
                         gBotones.setVisibility(View.VISIBLE);
                         btnEmpezar.setVisibility(View.VISIBLE);
+                        btnLimpiar.setVisibility(View.VISIBLE);
+                        enableDisableView(btnLimpiar, true);
                         enableDisableView(btnEmpezar, true);
 
                         //enableDisableView(gInstrucciones,true);

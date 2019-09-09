@@ -57,7 +57,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:background="@drawable/level"
                 android:clickable="true"
                 android:focusable="true"
@@ -66,12 +66,12 @@
                 android:text="@string/_1"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="100sp" />
+                android:textSize="50sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:background="@drawable/level"
                 android:clickable="true"
                 android:focusable="true"
@@ -80,19 +80,12 @@
                 android:text="@string/_2"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="100sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+                android:textSize="50sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:background="@drawable/level"
                 android:clickable="true"
                 android:focusable="true"
@@ -101,11 +94,18 @@
                 android:text="@string/_3"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="100sp" />
+                android:textSize="50sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:background="@drawable/level"
                 android:clickable="true"
                 android:focusable="true"
@@ -114,8 +114,59 @@
                 android:text="@string/_4"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="100sp" />
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/level"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="5"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/level"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="6"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="50sp" />
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/level"
+                android:clickable="false"
+                android:focusable="false"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="@string/_1"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:visibility="invisible" />
+        </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

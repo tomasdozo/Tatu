@@ -19,7 +19,7 @@ public class Tatu {
     }
 
     public void inicializar(int x, int y, int dir) {
-        if (x < 5 && x >= 0 && y < 5 && y >= 0) {
+        if (x < Tablero.ancho && x >= 0 && y < Tablero.alto && y >= 0) {
             posX = x;
             posY = y;
         } else {
@@ -93,10 +93,10 @@ public class Tatu {
 
     private boolean enLimite(int x, int y) {
         boolean aux = true;
-        if ((x >= Tablero.getInstance().getAncho()) || (x < 0)) {
+        if ((x >= Tablero.ancho) || (x < 0)) {
             aux = false;
         }
-        if ((y >= Tablero.getInstance().getAlto()) || (y < 0)) {
+        if ((y >= Tablero.alto) || (y < 0)) {
             aux = false;
         }
 
