@@ -343,7 +343,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
         ImageButton aux = new ImageButton(this);
         aux.setLayoutParams(new LinearLayout.LayoutParams(104, 104));
         aux.setScaleType(ImageView.ScaleType.FIT_CENTER);
-        aux.setBackgroundResource(R.drawable.casilla);
+        aux.setBackgroundResource(R.drawable.fondo_comandos);
         aux.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
