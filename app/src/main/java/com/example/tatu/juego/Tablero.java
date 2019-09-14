@@ -8,10 +8,10 @@ import static com.example.tatu.enumerativos.Elementos.Parada;
 
 
 public class Tablero {
-    private static final Tablero tablero = new Tablero();
-    private Casillero[][] mapa;
     public static final int ancho = 7;
     public static final int alto = 7;
+    private static final Tablero tablero = new Tablero();
+    private Casillero[][] mapa;
     private int paradas;
 
     private Tablero() {
