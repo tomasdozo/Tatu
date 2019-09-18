@@ -177,7 +177,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nivel"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimaryLight"
         android:textSize="80sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
