@@ -27,7 +27,7 @@ import static com.example.tatu.enumerativos.Instrucciones.Derecha;
 import static com.example.tatu.enumerativos.Instrucciones.Izquierda;
 import static com.example.tatu.enumerativos.Instrucciones.Seleccionar;
 
-public class Juego extends AppCompatActivity implements View.OnClickListener {
+public class Actividad1 extends AppCompatActivity implements View.OnClickListener {
 
     private TableLayout table;
     private Tatu tatu;
@@ -43,7 +43,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_juego);
+        setContentView(R.layout.actividad1);
 
         table = findViewById(R.id.tablero);
         ImageButton ibRight = findViewById(R.id.ibRight);
@@ -79,7 +79,7 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
         btnSalir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Juego.this.finish();
+                Actividad1.this.finish();
             }
         });
         btnEmpezar.setOnClickListener(new View.OnClickListener() {
@@ -143,7 +143,6 @@ public class Juego extends AppCompatActivity implements View.OnClickListener {
                         break;
                     case Nada:
                         cell.setImageResource(R.drawable.nada);
-                        //cell.setImageResource(R.drawable.casilla);
                         break;
                     case ParadaVisitada:
                         cell.setImageResource(R.drawable.parada_visitada);

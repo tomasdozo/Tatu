@@ -137,16 +137,6 @@ public class Tablero {
         return aux.getDato();
     }
 
-    public int getAncho() {
-        return ancho;
-    }
-
-
-    public int getAlto() {
-        return alto;
-    }
-
-
     public int getParadas() {
         return paradas;
     }

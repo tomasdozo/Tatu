@@ -11,7 +11,7 @@ public class Instrucciones extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intrucciones);
+        setContentView(R.layout.instrucciones);
 
         Button btnVolver = findViewById(R.id.btnSalir);
 

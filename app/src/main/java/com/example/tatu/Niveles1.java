@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Niveles extends AppCompatActivity implements View.OnClickListener {
+public class Niveles1 extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_niveles);
+        setContentView(R.layout.niveles1);
         TableLayout tabla = findViewById(R.id.tabla);
         for (int i = 0; i < tabla.getChildCount(); i++) {
             TableRow fila = (TableRow) tabla.getChildAt(i);
@@ -28,7 +28,7 @@ public class Niveles extends AppCompatActivity implements View.OnClickListener {
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Niveles.this.finish();
+                Niveles1.this.finish();
             }
         });
 
@@ -38,7 +38,7 @@ public class Niveles extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
         String aux = ((TextView) view).getText().toString();
         int nroNivel = Integer.parseInt(aux);
-        Intent intent = new Intent(Niveles.this, com.example.tatu.Juego.class);
+        Intent intent = new Intent(Niveles1.this, Actividad1.class);
         intent.putExtra("nivel", nroNivel);
         startActivity(intent);
     }

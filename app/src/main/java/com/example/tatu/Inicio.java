@@ -7,11 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class Inicio extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.inicio);
 
         Button btnJugar = findViewById(R.id.btnJugar);
         Button btnInstrucciones = findViewById(R.id.btnInstrucciones);
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         btnJugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, com.example.tatu.Niveles.class);
+                Intent intent = new Intent(Inicio.this, Niveles1.class);
                 startActivity(intent);
 
             }
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnInstrucciones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, com.example.tatu.Instrucciones.class);
+                Intent intent = new Intent(Inicio.this, com.example.tatu.Instrucciones.class);
                 startActivity(intent);
 
             }
