@@ -21,12 +21,12 @@ public class Tablero {
         return tablero;
     }
 
-    public void inicializar() {
+    private void inicializar() {
         paradas = 0;
         mapa = new Casillero[ancho][alto];
         for (int x = 0; x < ancho; x++) {
             for (int y = 0; y < alto; y++) {
-                mapa[x][y] = new Casillero(Elementos.Nada, x, y);
+                mapa[x][y] = new Casillero(Elementos.Nada);
             }
         }
     }
@@ -124,7 +124,7 @@ public class Tablero {
 
     }
 
-    public void setTipoCasilla(Elementos tipo, int x, int y) {
+    private void setTipoCasilla(Elementos tipo, int x, int y) {
         Casillero aux = mapa[x][y];
         aux.setDato(tipo);
         if (tipo == Elementos.Parada) {
@@ -137,11 +137,11 @@ public class Tablero {
         return aux.getDato();
     }
 
-    public int getParadas() {
+    int getParadas() {
         return paradas;
     }
 
-    public void enParada(int x, int y) {
+    void enParada(int x, int y) {
         mapa[x][y].setDato(Elementos.ParadaVisitada);
         paradas--;
     }

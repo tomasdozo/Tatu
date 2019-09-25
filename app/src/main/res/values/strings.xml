@@ -1,11 +1,7 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Tatu</string>
     <string name="jugar">Jugar</string>
     <string name="imagen">Imagen</string>
-
-    <string name="title_activity_juego">Juego</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
 
     <string name="volver">Volver</string>
     <string name="empezar">Empezar</string>
@@ -16,7 +12,7 @@
     <string name="cartel_error">ERROR: Intentaste acceder a una casilla bloqueada o fuera del límite del mapa</string>
     <string name="cartel_no_llego">No llegaste a la meta</string>
     <string name="intro_stem">Educación STEM\nen escuelas primarias</string>
-    <string name="comandos">Comandos</string>
+    <string name="comandos" tools:ignore="Typos">Comandos</string>
     <string name="ins_izquierda">Gira sobre el lugar hacia la izquierda.</string>
     <string name="ins_adelante">Avanza una casilla hacia donde esta mirando.</string>
     <string name="ins_derecha">Gira sobre el lugar hacia la derecha.</string>

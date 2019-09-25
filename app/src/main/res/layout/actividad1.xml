@@ -7,7 +7,6 @@
     tools:context=".Actividad1">
 
     <ImageView
-        android:id="@+id/fondo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/imagen"

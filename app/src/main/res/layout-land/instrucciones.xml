@@ -7,7 +7,6 @@
     tools:context=".Instrucciones">
 
     <ImageView
-        android:id="@+id/fondo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/imagen"
@@ -23,6 +22,7 @@
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/imagen"
         app:layout_constraintBottom_toBottomOf="@+id/ivSel"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -32,6 +32,7 @@
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/imagen"
         app:layout_constraintBottom_toBottomOf="@+id/textView12"
         app:layout_constraintEnd_toEndOf="@+id/ivParada"
         app:layout_constraintStart_toStartOf="@+id/ivParada"
@@ -41,6 +42,7 @@
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/imagen"
         app:layout_constraintBottom_toBottomOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="@+id/ivMeta"
         app:layout_constraintStart_toStartOf="@+id/ivMeta"
@@ -143,7 +145,6 @@
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <TextView
-        android:id="@+id/tvLeft"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
         android:layout_marginStart="8dp"
@@ -154,7 +155,6 @@
         app:layout_constraintTop_toTopOf="@+id/ivLeft" />
 
     <TextView
-        android:id="@+id/tvForward"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
         android:layout_marginStart="8dp"
@@ -165,7 +165,6 @@
         app:layout_constraintTop_toTopOf="@+id/ivForward" />
 
     <TextView
-        android:id="@+id/tvRight"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
         android:layout_marginStart="8dp"

@@ -27,6 +27,7 @@ import static com.example.tatu.enumerativos.Instrucciones.Derecha;
 import static com.example.tatu.enumerativos.Instrucciones.Izquierda;
 import static com.example.tatu.enumerativos.Instrucciones.Seleccionar;
 
+@SuppressWarnings("FieldCanBeLocal")
 public class Actividad1 extends AppCompatActivity implements View.OnClickListener {
 
     private TableLayout table;
@@ -338,7 +339,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
 
     }
 
-    public void addInstruction(Instrucciones ins) {
+    private void addInstruction(Instrucciones ins) {
         ImageButton aux = new ImageButton(this);
         aux.setLayoutParams(new LinearLayout.LayoutParams(104, 104));
         aux.setScaleType(ImageView.ScaleType.FIT_CENTER);
