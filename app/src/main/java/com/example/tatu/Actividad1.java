@@ -132,24 +132,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
             row = (TableRow) table.getChildAt(i);
             for (int j = 0; j < Tablero.ancho; j++) {
                 cell = (ImageView) row.getChildAt(j);
-                switch (juego.getTipoCasilla(j, i)) {
-                    case Meta:
-                        cell.setImageResource(R.drawable.meta);
-                        break;
-                    case Parada:
-                        cell.setImageResource(R.drawable.parada);
-                        break;
-                    case Bloqueado:
-                        cell.setImageResource(R.drawable.blocked);
-                        break;
-                    case Nada:
-                        cell.setImageResource(R.drawable.nada);
-                        break;
-                    case ParadaVisitada:
-                        cell.setImageResource(R.drawable.parada_visitada);
-                }
-
-
+                cell.setImageResource(juego.getTipoCasilla(j, i).getImageID());
             }
         }
 
@@ -171,29 +154,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
         }
 
         //Mostrar Mensaje
-        switch (msg) {
-            case META:
-                tvInfo.setText(R.string.cartel_meta);
-                break;
-            case PARADA:
-                tvInfo.setText(R.string.cartel_parada);
-                break;
-            case PARADA_VISITADA:
-                tvInfo.setText(R.string.cartel_parada_visitada);
-                break;
-            case FALTA_PARADA:
-                tvInfo.setText(R.string.cartel_paradas_faltantes);
-                break;
-            case ERROR:
-                tvInfo.setText(R.string.cartel_error);
-                break;
-            case NEUTRO:
-                tvInfo.setText("");
-                break;
-            case NO_LLEGASTE:
-                tvInfo.setText(R.string.cartel_no_llego);
-                break;
-        }
+        tvInfo.setText(msg.getDescriptionID());
 
     }
 
@@ -352,23 +313,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
             }
         });
         instrucciones.add(ins);
-        switch (ins) {
-            case Izquierda:
-
-                aux.setImageResource(R.drawable.left);
-                break;
-            case Avanzar:
-
-                aux.setImageResource(R.drawable.forward);
-                break;
-            case Derecha:
-
-                aux.setImageResource(R.drawable.right);
-                break;
-            case Seleccionar:
-                aux.setImageResource(R.drawable.sel);
-                break;
-        }
+        aux.setImageResource(ins.getImageID());
         gInstrucciones.addView(aux);
     }
 

@@ -5,12 +5,15 @@
 
     <string name="volver">Volver</string>
     <string name="empezar">Empezar</string>
+
     <string name="cartel_meta">(~˘▾˘)~ ¡GANASTE! ~(˘▾˘~)</string>
     <string name="cartel_parada">Llegaste a una parada</string>
     <string name="cartel_parada_visitada">Ya habias visitado esta parada</string>
     <string name="cartel_paradas_faltantes">Te falta pasar por algunas paradas</string>
     <string name="cartel_error">ERROR: Intentaste acceder a una casilla bloqueada o fuera del límite del mapa</string>
     <string name="cartel_no_llego">No llegaste a la meta</string>
+    <string name="cartel_neutro" />
+
     <string name="intro_stem">Educación STEM\nen escuelas primarias</string>
     <string name="comandos" tools:ignore="Typos">Comandos</string>
     <string name="ins_izquierda">Gira sobre el lugar hacia la izquierda.</string>
