@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -39,6 +41,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
     private HorizontalScrollView horizontalScroll;
     private List<Instrucciones> instrucciones, lAux;
     private Mensajes msg;
+    private int delay;
 
 
     @Override
@@ -51,6 +54,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
         ImageButton ibLeft = findViewById(R.id.ibLeft);
         ImageButton ibForward = findViewById(R.id.ibForward);
         ImageButton ibSel = findViewById(R.id.ibSel);
+        Switch fastForward = findViewById(R.id.fastForward);
         tvInfo = findViewById(R.id.tvInfo);
         btnSalir = findViewById(R.id.btnSalir);
         btnLimpiar = findViewById(R.id.btnLimpiar);
@@ -58,9 +62,9 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
         gInstrucciones = findViewById(R.id.linearInstrucciones);
         horizontalScroll = findViewById(R.id.scrollHorizontal);
         gBotones = findViewById(R.id.linearBotones);
-
         instrucciones = new LinkedList<>();
         msg = Mensajes.NEUTRO;
+        delay = 500;
 
         //Inicializar Tablero Codigo
         inicializarTablero();
@@ -94,7 +98,16 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
             public void onClick(View view) {
                 gInstrucciones.removeAllViews();
                 instrucciones.clear();
-
+            }
+        });
+        fastForward.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    delay = 200;
+                } else {
+                    delay = 500;
+                }
             }
         });
 
@@ -197,7 +210,8 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
                     });
 
                     try {
-                        Thread.sleep(500);
+
+                        Thread.sleep(delay);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
