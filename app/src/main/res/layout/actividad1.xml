@@ -172,18 +172,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStart" />
 
-    <Switch
+    <ToggleButton
         android:id="@+id/fastForward"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
         android:background="@color/colorPrimary"
-        android:paddingLeft="5dp"
-        android:paddingTop="10dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="10dp"
-        android:thumb="@drawable/fast_forward"
-        app:layout_constraintBottom_toBottomOf="@+id/btnStart"
+        android:textColor="@color/white"
+        android:textOff=">"
+        android:textOn=">>>"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSalir"
         app:layout_constraintEnd_toStartOf="@+id/btnLimpiar"
-        app:layout_constraintStart_toEndOf="@+id/btnStart" />
+        app:layout_constraintStart_toEndOf="@+id/btnStart"
+        app:layout_constraintTop_toTopOf="@+id/btnSalir"
+        tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

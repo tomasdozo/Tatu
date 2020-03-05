@@ -9,10 +9,10 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -54,7 +54,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
         ImageButton ibLeft = findViewById(R.id.ibLeft);
         ImageButton ibForward = findViewById(R.id.ibForward);
         ImageButton ibSel = findViewById(R.id.ibSel);
-        Switch fastForward = findViewById(R.id.fastForward);
+        ToggleButton fastForward = findViewById(R.id.fastForward);
         tvInfo = findViewById(R.id.tvInfo);
         btnSalir = findViewById(R.id.btnSalir);
         btnLimpiar = findViewById(R.id.btnLimpiar);
@@ -104,9 +104,13 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    delay = 200;
+                    delay = 35;
+                    buttonView.setTextColor(getResources().getColor(R.color.colorAccent));
+                    buttonView.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 } else {
                     delay = 500;
+                    buttonView.setTextColor(getResources().getColor(R.color.white));
+                    buttonView.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 }
             }
         });
