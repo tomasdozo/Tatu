@@ -22,7 +22,6 @@ import com.example.tatu.juego.Tablero;
 import com.example.tatu.juego.Tatu;
 
 import java.util.LinkedList;
-import java.util.List;
 
 import static com.example.tatu.enumerativos.Instrucciones.Avanzar;
 import static com.example.tatu.enumerativos.Instrucciones.Derecha;
@@ -39,9 +38,10 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
     private TextView tvInfo;
     private LinearLayout gInstrucciones, gBotones;
     private HorizontalScrollView horizontalScroll;
-    private List<Instrucciones> instrucciones, lAux;
+    private LinkedList<Instrucciones> instrucciones, lAux;
     private Mensajes msg;
-    private int delay;
+    private int delay, nivel;
+
 
 
     @Override
@@ -65,6 +65,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
         instrucciones = new LinkedList<>();
         msg = Mensajes.NEUTRO;
         delay = 500;
+        nivel = this.getIntent().getIntExtra("nivel", 1);
 
         //Inicializar Tablero Codigo
         inicializarTablero();
@@ -104,7 +105,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    delay = 35;
+                    delay = 100;
                     buttonView.setTextColor(getResources().getColor(R.color.colorAccent));
                     buttonView.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 } else {
@@ -137,7 +138,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
     private void inicializarTablero() {
         tatu = Tatu.getInstance();
         juego = Tablero.getInstance();
-        juego.cargarNivel(this.getIntent().getIntExtra("nivel", 1));
+        juego.cargarNivel(nivel);
     }
 
     private void graficar() {
@@ -200,9 +201,8 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
                 lAux.addAll(instrucciones);
 
                 //Recorrido de las intrucciones
-                while (!instrucciones.isEmpty() && (msg != Mensajes.ERROR)) {
-                    msg = Tatu.getInstance().accion(instrucciones.get(0));
-                    instrucciones.remove(0);
+                while (!instrucciones.isEmpty() && (msg != Mensajes.ERROR) && (msg != Mensajes.META)) {
+                    msg = Tatu.getInstance().accion(instrucciones.removeFirst());
 
                     runOnUiThread(new Runnable() {
 
@@ -231,6 +231,9 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
                             graficar();
                         }
                     });
+                } else if (msg == Mensajes.META) {
+                    nivel++;
+                    lAux.clear();
                 }
 
                 //Tiempo Muerto para mostrar el mensaje
@@ -259,8 +262,8 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
                         graficar();
 
                         //Vuelve a agregar el recorrido
-                        for (int i = 0; i < lAux.size(); i++) {
-                            addInstruction(lAux.get(i));
+                        while (lAux.size() > 0) {
+                            addInstruction(lAux.removeFirst());
                         }
                         horizontalScroll.postDelayed(new Runnable() {
                             public void run() {
@@ -330,7 +333,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
                 gInstrucciones.removeView(view);
             }
         });
-        instrucciones.add(ins);
+        instrucciones.addLast(ins);
         aux.setImageResource(ins.getImageID());
         gInstrucciones.addView(aux);
     }

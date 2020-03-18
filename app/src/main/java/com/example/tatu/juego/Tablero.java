@@ -119,7 +119,8 @@ public class Tablero {
                 Tatu.getInstance().inicializar(0, 5, 90);
                 break;
 
-
+            default:
+                Tatu.getInstance().inicializar(3, 3, 0);
         }
 
     }

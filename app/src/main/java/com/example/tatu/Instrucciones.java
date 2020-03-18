@@ -1,5 +1,6 @@
 package com.example.tatu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,14 +14,15 @@ public class Instrucciones extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.instrucciones);
 
-        Button btnVolver = findViewById(R.id.btnSalir);
+        Button btnJugar = findViewById(R.id.btnJugar);
 
-        btnVolver.setOnClickListener(new View.OnClickListener() {
+        btnJugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Instrucciones.this.finish();
+                Intent intent = new Intent(Instrucciones.this, Niveles1.class);
+                startActivity(intent);
+
             }
         });
-
     }
 }

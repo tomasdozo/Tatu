@@ -34,6 +34,7 @@
         app:srcCompat="@drawable/recuadro" />
 
     <ImageView
+        android:id="@+id/imageView6"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/imagen"
@@ -52,19 +53,6 @@
         app:layout_constraintStart_toStartOf="@+id/ivMeta"
         app:layout_constraintTop_toTopOf="@+id/ivMeta"
         app:srcCompat="@drawable/recuadro" />
-
-    <Button
-        android:id="@+id/btnSalir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/volver"
-        android:textColor="@color/white"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/ivLeft"
@@ -247,5 +235,22 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btnJugar"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/jugar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="312dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
