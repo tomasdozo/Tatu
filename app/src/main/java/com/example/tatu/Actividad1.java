@@ -43,7 +43,6 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
     private int delay, nivel;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +62,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
         horizontalScroll = findViewById(R.id.scrollHorizontal);
         gBotones = findViewById(R.id.linearBotones);
         instrucciones = new LinkedList<>();
-        msg = Mensajes.NEUTRO;
+        msg = Mensajes.NULO;
         delay = 500;
         nivel = this.getIntent().getIntExtra("nivel", 1);
 
@@ -173,7 +172,11 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
 
         //Mostrar Mensaje
         tvInfo.setText(msg.getDescriptionID());
-
+        if (msg != Mensajes.NULO) {
+            tvInfo.setVisibility(View.VISIBLE);
+        } else {
+            tvInfo.setVisibility(View.GONE);
+        }
     }
 
     private void recorrer() {
@@ -223,7 +226,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
                 //Termino el recorrido
 
                 //Chequea mensaje
-                if (msg == Mensajes.NEUTRO) {
+                if (msg == Mensajes.NULO) {
                     msg = Mensajes.NO_LLEGASTE;
                     runOnUiThread(new Runnable() {
                         @Override
@@ -248,7 +251,7 @@ public class Actividad1 extends AppCompatActivity implements View.OnClickListene
 
                     @Override
                     public void run() {
-                        msg = Mensajes.NEUTRO;
+                        msg = Mensajes.NULO;
                         gInstrucciones.removeAllViews();
                         instrucciones.clear();
                         gBotones.setVisibility(View.VISIBLE);

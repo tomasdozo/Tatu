@@ -8,7 +8,7 @@ public enum Mensajes {
     PARADA(R.string.cartel_parada),
     PARADA_VISITADA(R.string.cartel_parada_visitada),
     ERROR(R.string.cartel_error),
-    NEUTRO(R.string.cartel_neutro),
+    NULO(R.string.cartel_neutro),
     NO_LLEGASTE(R.string.cartel_no_llego);
 
     private int descriptionID;

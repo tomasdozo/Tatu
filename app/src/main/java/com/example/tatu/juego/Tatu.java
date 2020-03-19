@@ -18,7 +18,7 @@ public class Tatu {
         return instance;
     }
 
-    public void inicializar(int x, int y, int dir) {
+    void inicializar(int x, int y, int dir) {
         if (x < Tablero.ancho && x >= 0 && y < Tablero.alto && y >= 0) {
             posX = x;
             posY = y;
@@ -35,7 +35,7 @@ public class Tatu {
     }
 
     public Mensajes accion(Instrucciones aux) {
-        Mensajes info = Mensajes.NEUTRO;
+        Mensajes info = Mensajes.NULO;
         switch (aux) {
             case Izquierda:
                 dir -= 90;
@@ -70,7 +70,7 @@ public class Tatu {
     }
 
     private Mensajes sel() { //Se debe contemplar todas las casillas seleccionables, podria depender del tablero implementado
-        Mensajes respuesta = Mensajes.NEUTRO;
+        Mensajes respuesta = Mensajes.NULO;
         Elementos aux = Tablero.getInstance().getTipoCasilla(posX, posY);
         switch (aux) {
             case Meta:

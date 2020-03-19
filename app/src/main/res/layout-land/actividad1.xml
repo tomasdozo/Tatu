@@ -153,23 +153,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvInfo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/scrollHorizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tablero"
-        app:layout_constraintTop_toBottomOf="@+id/btnStart" />
-
     <ToggleButton
         android:id="@+id/fastForward"
         android:layout_width="50dp"
@@ -182,5 +165,21 @@
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#CFFF"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
